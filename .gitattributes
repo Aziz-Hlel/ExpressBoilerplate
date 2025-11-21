@@ -1,0 +1,5 @@
+# Always use LF for text files for consistent line endings
+* text=auto eol=lf
+# Ignore node modules and build directories
+node_modules/ binary
+dist/ binary
