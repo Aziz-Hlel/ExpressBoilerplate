@@ -34,11 +34,7 @@ class UserService {
       where: {
         uid,
       },
-
-
     });
-
-    
   }
 
   async createUser(tokenId: string) {
@@ -49,7 +45,6 @@ class UserService {
     }
 
     let email = decodedToken.decodedToken.email;
-
 
     const user = await prisma.user.findUnique({
       where: {
@@ -70,12 +65,7 @@ class UserService {
     });
 
     return newUser;
-
-
-    }
-
-
-
+  }
 }
 
 export const userService = new UserService();
